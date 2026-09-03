@@ -84,6 +84,43 @@ PCでの利用を中心に設計してください。
 実装が完了したら、アプリケーションが正常に起動・ビルドできることを確認してください。
 ```
 
+### ハーネスの準備
+
+```sh
+for app_dir in apps/*-agentsmd-app; do
+  [[ -d "$app_dir" ]] || continue
+
+  mkdir -p "$app_dir/.cursor/rules"
+
+  cat > "$app_dir/AGENTS.md" <<'EOF'
+# AGENTS.md
+
+### UI Rules
+
+- Do not add explanatory helper copy that restates what the control already implies (e.g. "optional", "works without selection", "failure falls back to X"). Prefer clear labels and option text; surface status in results when needed, not as instructional paragraphs under every field.
+- Keep UI copy concise. Avoid tutorial-style descriptions unless the user explicitly asks for onboarding help.
+EOF
+
+  cat > "$app_dir/CLAUDE.md" <<'EOF'
+# CLAUDE.md
+
+## Context
+
+- Read and follow all instructions in @AGENTS.md.
+EOF
+
+  cat > "$app_dir/.cursor/rules/agents.mdc" <<'EOF'
+---
+description: Shared application instructions
+globs:
+alwaysApply: true
+---
+
+Read and follow all instructions in @AGENTS.md.
+EOF
+done
+```
+
 ## アプリ起動
 
 ```sh
