@@ -11,6 +11,20 @@
 | Cursor | Auto（モデル選択なし） |
 | Muse Spark | 1.3 |
 
+## UI 比較
+
+各アプリの画面上部を同じサイズに揃え、4 列 × 3 行で比較しています。各モデルは `base`、`agentsmd` の順に横並びです。
+
+![全 12 アプリの UI 比較](./screenshots/all-apps-tile.png)
+
+### 画像内の配置
+
+|        | 1 列目 | 2 列目 | 3 列目 | 4 列目 |
+| ------ | ------ | ------ | ------ | ------ |
+| 1 行目 | [Claude base](./apps/claude-base-app) | [Claude agentsmd](./apps/claude-agentsmd-app) | [Cursor base](./apps/cursor-base-app) | [Cursor agentsmd](./apps/cursor-agentsmd-app) |
+| 2 行目 | [Gemini base](./apps/gemini-base-app) | [Gemini agentsmd](./apps/gemini-agentsmd-app) | [GPT base](./apps/gpt-base-app) | [GPT agentsmd](./apps/gpt-agentsmd-app) |
+| 3 行目 | [Grok base](./apps/grok-base-app) | [Grok agentsmd](./apps/grok-agentsmd-app) | [Muse Spark base](./apps/muse-spark-base-app) | [Muse Spark agentsmd](./apps/muse-spark-agentsmd-app) |
+
 ## 新規リポジトリ作成
 
 ```sh
