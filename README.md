@@ -1,5 +1,16 @@
 # AI の UI 比較ベンチマークリポジトリ
 
+## 使用モデル
+
+| エージェント | モデル |
+| --- | --- |
+| GPT | 5.6 Sol |
+| Claude | Fable 5.1 |
+| Gemini | Gemini 3.8 Flash |
+| Grok | Grok 4.6 |
+| Cursor | Auto（モデル選択なし） |
+| Muse Spark | 1.3 |
+
 ## 新規リポジトリ作成
 
 ```sh
